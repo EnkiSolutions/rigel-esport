@@ -1,0 +1,141 @@
+{
+    "games": [
+        {
+            "name" : "Rocket League",
+            "rosters" : [
+                {
+                    "name": "R1",
+                    "players": [
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        },
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        },
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        }
+                    ]
+                },
+                {
+                    "name": "R2",
+                    "players": [
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        },
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        },
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        }
+                    ]
+                },
+                {
+                    "name": "R3",
+                    "players": [
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        },
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        },
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name" : "Valorant",
+            "rosters" : [
+                {
+                    "name": "R1",
+                    "players": [
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        },
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        },
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        }
+                    ]
+                },
+                {
+                    "name": "R2",
+                    "players": [
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        },
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        },
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        }
+                    ]
+                },
+                {
+                    "name": "R3",
+                    "players": [
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        },
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        },
+                        {
+                            "id": "xxx",
+                            "gamerTag": "xxx",
+                            "rank": "xxx"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "players": [
+        {
+            "id": "xxx",
+            "name": "DekuSama",
+            "twitch": "xxx"
+        }
+    ]
+}
