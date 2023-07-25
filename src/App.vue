@@ -13,7 +13,7 @@ const toggle = () => {
 </script>
 <template>
   <div id="page">
-    <div class="top">
+    <div id="top">
       <Dropdown ref="gamesDropdown" class="dropdown menu">
         <template #selector>
           <SVGIconButton :icon="($route.meta.icon as string)??'game'"
@@ -34,6 +34,7 @@ const toggle = () => {
           </SVGIconButton>
         </router-link>
       </Dropdown>
+      <router-link id="top-zone" to="/" />
       <!--
       <div class="user menu">
         <router-link to="/shop">
@@ -55,13 +56,21 @@ const toggle = () => {
         <div>Partenaires</div>
       </Vue3Marquee>
       <div id="networks">
-        <SVGIcon name="discord">Discord</SVGIcon>
-        <SVGIcon name="twitter">Twitter</SVGIcon>
-        <SVGIcon name="twitch">Twitch</SVGIcon>
+        <a href="https://discord.gg/DFWUa93sEM">
+          <SVGIcon name="discord">Discord</SVGIcon>
+        </a>
+        <a href="https://twitter.com/Rigel_Esport">
+          <SVGIcon name="twitter">Twitter</SVGIcon>
+        </a>
+        <a href="https://www.twitch.tv/rigel_ttv">
+          <SVGIcon name="twitch">Twitch</SVGIcon>
+        </a>
+        <a href="https://www.tiktok.com/@rigel_esport">
+          <SVGIcon name="tiktok">TikTok</SVGIcon>
+        </a>
       <!--
         <SVGIcon name="facebook">Facebook</SVGIcon>
         <SVGIcon name="youtube">YouTube</SVGIcon>
-        <SVGIcon name="tiktok">TikTok</SVGIcon>
         <SVGIcon name="instagram">Instagram</SVGIcon>
       -->
     </div>
@@ -77,7 +86,7 @@ const toggle = () => {
   text-align: center;
 }
 
-.top {
+#top {
   background-image: url('./assets/banniere.png');
   background-repeat: no-repeat;
   background-position-x: center;
@@ -86,6 +95,18 @@ const toggle = () => {
   height: 256px;
   display: flex;
   position: relative;
+}
+
+#top-zone {
+ position: absolute;
+ left: 0px;
+ right: 0px;
+ top: 0px;
+ bottom: 0px;
+}
+
+.dropdown {
+  z-index: 1;
 }
 
 .dropdown button {

@@ -1,5 +1,9 @@
 <script setup lang="ts">
 </script>
 <template>
-    <div>Qui sommes-nous ?</div>
+    <h1>Qui sommes-nous ?</h1>
+    <p>Nous sommes une structure eSport basée sur Rocket League, Valorant et Fortnite, fondée le 8 mars 2021 par Solo et Deku. Notre projet est né de la passion commune de nos fondateurs, avec pour objectif de figurer parmi les plus grandes références de l'eSport.</p>
+    <p>Nous avons choisi le nom “Rigel Esport” en référence à une étoile de la constellation d'Orion. Rigel se distingue du Soleil par sa froideur intense, une sensation que nous souhaitons transmettre à nos futurs adversaires. Nos principaux objectifs sont de percer dans l'eSport, de fournir un environnement sécurisé pour les jeunes, d'aider les joueurs à progresser et de promouvoir un esprit de cordialité et de coopération dans l'univers de l'eSport.</p>
+    <p>Pour chaque jeu auquel nous participons, nous proposons une section dédiée sur Discord où les joueurs, les coachs et les managers peuvent interagir. Notre serveur Discord est le pilier de la coordination au sein de notre communauté. Nous formons plusieurs équipes dans les différents jeux que nous pratiquons afin d'offrir du spectacle qui sera prochainement diffusé sur notre WebTV pour nos fans dévoués. Nous sommes également en constante évolution grâce à nos partenaires, notamment Team IRC.</p>
+    <p>Vous pouvez nous retrouver sur <a href="https://discord.gg/DFWUa93sEM">Discord</a>, <a href="https://twitter.com/Rigel_Esport">Twitter</a>, <a href="https://www.tiktok.com/@rigel_esport?lang=fr">TikTok</a> et <a href="https://www.twitch.tv/rigel_ttv">Twitch</a>. Nous avons déjà organisé un tournoi Rocket League en partenariat avec Team IRC le week-end du 17 décembre 2022, et nous avons prévu un autre tournoi Rocket League en collaboration avec Team IRC pour la semaine du 21 août 2023.</p>
 </template>
