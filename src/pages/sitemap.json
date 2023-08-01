@@ -1,0 +1,42 @@
+{
+    "prevention": [
+        {
+            "path": "home",
+            "title": "Qui sommes-nous ?"
+        },
+        {
+            "path": "ateliers",
+            "title": "Ateliers parents-enfants"
+        },
+        {
+            "path": "formations",
+            "title": "Nos formations"
+        },
+        {
+            "path": "partenaires",
+            "title": "Nos partenaires Prévention"
+        }
+    ],
+    "gaming": [
+        {
+            "path": "webtv",
+            "title": "Web TV"
+        },
+        {
+            "path": "jeux",
+            "title": "Nos jeux"
+        },
+        {
+            "path": "safe",
+            "title": "SAFE League"
+        },
+        {
+            "path": "projets",
+            "title": "Projets communautaires"
+        },
+        {
+            "path": "partenaires",
+            "title": "Nos partenaires Gaming"
+        }
+    ]
+}

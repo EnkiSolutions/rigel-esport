@@ -3,8 +3,8 @@ import { ref } from 'vue';
 import Dropdown from './components/Dropdown.vue';
 import SVGIcon from './components/SVGIcon.vue';
 import SVGIconButton from './components/SVGIconButton.vue';
-import { Vue3Marquee } from 'vue3-marquee'
-import 'vue3-marquee/dist/style.css'
+import { Vue3Marquee } from 'vue3-marquee';
+import 'vue3-marquee/dist/style.css';
 
 const gamesDropdown = ref<InstanceType<typeof Dropdown> | null>(null);
 const toggle = () => {
@@ -14,37 +14,43 @@ const toggle = () => {
 <template>
   <div id="page">
     <div id="top">
+      <router-link to="/" v-slot="{ href, navigate }" >
+          <SVGIconButton icon="home" :href="href" @click="navigate" />
+      </router-link>
+      <router-link to="/events" v-slot="{ href, navigate }" >
+          <SVGIconButton icon="events" :href="href" @click="navigate" />
+      </router-link>
+      <router-link to="/web-tv" v-slot="{ href, navigate }" >
+          <SVGIconButton icon="tv" :href="href" @click="navigate" />
+      </router-link>
       <Dropdown ref="gamesDropdown" class="dropdown menu">
         <template #selector>
-          <SVGIconButton :icon="($route.meta.icon as string)??'game'"
-            @click="toggle">
-            <div>{{ $route.name?.toString()??'Nos jeux' }}</div>
-          </SVGIconButton>
+          <SVGIconButton icon="game" @click="toggle" />
         </template>
         <router-link :to="{ name: 'Rocket League' }" v-slot="{ href, navigate }">
-          <SVGIconButton :href="href" icon="rocket-league" 
+          <SVGIconButton icon="rocket-league" :href="href" 
             @click="() => { toggle(); navigate(); }">
             <div>Rocket League</div>
           </SVGIconButton>
         </router-link>
         <router-link :to="{ name: 'Valorant' }" v-slot="{ href, navigate }">
-          <SVGIconButton :href="href" icon="valorant" 
+          <SVGIconButton icon="valorant" :href="href"
             @click="() => { toggle(); navigate(); }">
             <div>Valorant</div>
           </SVGIconButton>
         </router-link>
       </Dropdown>
-      <router-link id="top-zone" to="/" />
-      <!--
       <div class="user menu">
-        <router-link to="/shop">
-          <SVGIcon name="bag" />
+        <router-link to="/coaching" v-slot="{ href, navigate }">
+          <SVGIconButton icon="coaching" :href="href" @click="navigate" />
         </router-link>
-        <router-link to="/login">
-          <SVGIcon name="user" />
+        <router-link to="/shop" v-slot="{ href, navigate }">
+          <SVGIconButton icon="bag" :href="href" @click="navigate" />
+        </router-link>
+        <router-link to="/login" v-slot="{ href, navigate }">
+          <SVGIconButton icon="user" :href="href" @click="navigate" />
         </router-link>
       </div>
-      -->
     </div>
     <div class="social menu">
       <Vue3Marquee id="partners" clone pauseOnHover>
@@ -73,7 +79,7 @@ const toggle = () => {
         <SVGIcon name="youtube">YouTube</SVGIcon>
         <SVGIcon name="instagram">Instagram</SVGIcon>
       -->
-    </div>
+      </div>
     </div>
     <router-view></router-view>
   </div>
@@ -97,49 +103,53 @@ const toggle = () => {
   position: relative;
 }
 
-#top-zone {
- position: absolute;
- left: 0px;
- right: 0px;
- top: 0px;
- bottom: 0px;
-}
-
 .dropdown {
   z-index: 1;
 }
 
-.dropdown button {
+.overlay button {
   width: 160px;
 }
 
-.menu button {
+#top a {
+  height: 32px;
+}
+
+button {
   display: flex;
-  line-height: 32px;
-  padding: 0px 8px;
+  line-height: 24px;
+  padding: 4px;
 }
 
 .menu div {
   margin: auto;
 }
 
-.menu svg {
-  width: 32px;
-  height: 32px;
+svg {
+  width: 24px;
+  height: 24px;
 }
 
-.menu svg,
-.menu svg g,
-.menu svg path {
-  fill: var(--color-lt-2);
+svg,
+svg g,
+svg path {
+  transition: 200ms;
+  fill: var(--color-lt-3);
+}
+
+a:hover svg,
+a:hover svg g,
+a:hover svg path,
+button:hover svg,
+button:hover svg g,
+button:hover svg path {
+  fill: var(--color-lt-1);
 }
 
 .social {
   display: flex;
   width: 100%;
-}
-
-#partners {
+  height: 32px;
   line-height: 32px;
 }
 
@@ -151,6 +161,9 @@ const toggle = () => {
 #networks {
   display: flex;
   width: fit-content;
+  height: 24px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   padding-left: 16px;
   gap: 8px;
 }

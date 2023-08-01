@@ -28,6 +28,7 @@ a {
   font-weight: 500;
   color: var(--color-lt-2);
   text-decoration: inherit;
+  transition: 200ms;
 }
 a:hover {
   color: var(--color-lt-3);
@@ -59,7 +60,7 @@ button {
   border-color: var(--color-lt-2);
   background-color: var(--color-dk);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: 200ms;
 }
 button:hover {
   border-color: var(--color-lt-3);
