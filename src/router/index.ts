@@ -1,24 +1,30 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
-import Home from '../pages/Home.vue';
-import Game from '../pages/Game.vue';
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import Page from "../components/Page.vue"
+import sitemap from "../pages/sitemap.json";
+import { h } from 'vue';
 
-const routes = [
-  { path: '/', component: Home },
+let routes: RouteRecordRaw[]  = [
   { 
-    path: '/game/rocket-league',
-    name: 'Rocket League',
-    component: Game,
-    meta: { icon: 'rocket-league' }
+    path: '/:pathMatch(.*)',
+    component: h("<div>Oups ! Cette page n'existe pas</div>")
   },
   {
-    path: '/game/valorant',
-    name: 'Valorant',
-    component: Game,
-    meta: { icon: 'valorant' }
-  },
-]
-
+    path: '/',
+    redirect: '/home'
+  }
+];
+let section: keyof typeof sitemap;
+for (section in sitemap) {
+  const path = section == "$r" 
+    ? '/:page'
+    : '/' + section + '/:page'
+  routes.push({
+    path,
+    component: Page,
+    props: true
+  });
+}
 export default createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 })

@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Dropdown from './components/Dropdown.vue';
+import Menu from './components/Menu.vue';
 import SVGIcon from './components/SVGIcon.vue';
 import SVGIconButton from './components/SVGIconButton.vue';
+import { $r, game } from "./pages/sitemap.json";
 import { Vue3Marquee } from 'vue3-marquee';
 import 'vue3-marquee/dist/style.css';
 
@@ -10,47 +12,37 @@ const gamesDropdown = ref<InstanceType<typeof Dropdown> | null>(null);
 const toggle = () => {
   gamesDropdown.value?.toggle();
 };
+
+const mainMenu = $r.slice(0, 3);
+const userMenu = $r.slice(3, 6);
 </script>
 <template>
   <div id="page">
     <div id="top">
-      <router-link to="/" v-slot="{ href, navigate }" >
-          <SVGIconButton icon="home" :href="href" @click="navigate" />
-      </router-link>
-      <router-link to="/events" v-slot="{ href, navigate }" >
-          <SVGIconButton icon="events" :href="href" @click="navigate" />
-      </router-link>
-      <router-link to="/web-tv" v-slot="{ href, navigate }" >
-          <SVGIconButton icon="tv" :href="href" @click="navigate" />
-      </router-link>
+      <Menu
+        :routes="mainMenu"
+        v-slot="{ icon, href, navigate }" >
+          <SVGIconButton :icon="icon!" :href="href" @click="navigate" />
+      </Menu>
       <Dropdown ref="gamesDropdown" class="dropdown menu">
         <template #selector>
           <SVGIconButton icon="game" @click="toggle" />
         </template>
-        <router-link :to="{ name: 'Rocket League' }" v-slot="{ href, navigate }">
-          <SVGIconButton icon="rocket-league" :href="href" 
-            @click="() => { toggle(); navigate(); }">
-            <div>Rocket League</div>
+        <Menu
+          root="game"
+          :routes="game"
+          v-slot="{ icon, title, href, navigate }">
+          <SVGIconButton :icon="icon!" :href="href" @click="navigate">
+            <div>{{ title }}</div>
           </SVGIconButton>
-        </router-link>
-        <router-link :to="{ name: 'Valorant' }" v-slot="{ href, navigate }">
-          <SVGIconButton icon="valorant" :href="href"
-            @click="() => { toggle(); navigate(); }">
-            <div>Valorant</div>
-          </SVGIconButton>
-        </router-link>
+        </Menu>
       </Dropdown>
-      <div class="user menu">
-        <router-link to="/coaching" v-slot="{ href, navigate }">
-          <SVGIconButton icon="coaching" :href="href" @click="navigate" />
-        </router-link>
-        <router-link to="/shop" v-slot="{ href, navigate }">
-          <SVGIconButton icon="bag" :href="href" @click="navigate" />
-        </router-link>
-        <router-link to="/login" v-slot="{ href, navigate }">
-          <SVGIconButton icon="user" :href="href" @click="navigate" />
-        </router-link>
-      </div>
+      <Menu
+        class="user menu"
+        :routes="userMenu"
+        v-slot="{ icon, href, navigate }" >
+          <SVGIconButton :icon="icon!" :href="href" @click="navigate" />
+      </Menu>
     </div>
     <div class="social menu">
       <Vue3Marquee id="partners" clone pauseOnHover>
@@ -81,7 +73,21 @@ const toggle = () => {
       -->
       </div>
     </div>
-    <router-view></router-view>
+    <router-view v-slot="{ Component }">
+      <template v-if="Component">
+          <Transition mode="out-in">
+              <KeepAlive>
+                  <Suspense>
+                      <component :is="Component" :key="$route.path" />
+                      <template #fallback>
+                          Chargement...
+                      </template>
+                  </Suspense>
+              </KeepAlive>
+          </Transition>
+      </template>
+    </router-view>
+
   </div>
 </template>
 
@@ -103,16 +109,38 @@ const toggle = () => {
   position: relative;
 }
 
+#top nav {
+	display: flex;
+}
+
+#top a {
+  height: 32px;
+}
+
 .dropdown {
   z-index: 1;
+}
+
+.overlay > nav {
+  flex-direction: column;
 }
 
 .overlay button {
   width: 160px;
 }
 
-#top a {
-  height: 32px;
+.overlay a {
+  text-align: center;
+	font-size: 0.8rem;
+	transition: font-size 1s;
+}
+
+.overlay a:hover {
+	font-size: 0.9rem;
+}
+
+.overlay a.router-link-active {
+	font-size: 1rem;
 }
 
 button {

@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useRoute } from 'vue-router';
+import routes from "../pages/sitemap.json";
 import { Base, default as templates } from '../templates'
-
-const props = defineProps<{ root: string, title: string, page: string }>();
-const { template, content } = await import(`../pages/${props.root}/page-${props.page}.json`);
 const edit = ref(false);
-localStorage.setItem('origin', useRoute().fullPath);
+const { fullPath } = useRoute();
+const splittedPath = fullPath.split("/");
+splittedPath.shift();
+const page = splittedPath.pop();
+const root = splittedPath.pop()??"$r";
+const title = routes[root].find(v => v.path == page)?.title;
+const { template, content } = await import(`../pages/${root}/${page}.json`);
+localStorage.setItem('origin', fullPath);
 const login = localStorage.getItem('login')
 const onModified = async (c: string) => await fetch(
 	window.location.origin + '/api/github/updateFile',
@@ -16,8 +21,8 @@ const onModified = async (c: string) => await fetch(
 			"Content-Type": "application/json"
 		},
 		body: JSON.stringify({
-			root: props.root,
-			page: props.page,
+			root: root,
+			page: page,
 			content: JSON.stringify({content: c})
 		})
 	}
@@ -27,7 +32,7 @@ const onModified = async (c: string) => await fetch(
 <template>
 	<div class="page">
 		<div id="title">
-			{{ title }}
+			<h1>{{ title }}</h1>
 			<button v-if="login"
 				@click="edit = !edit">
 				{{ edit ? "Mettre-à-jour" : "Editer" }}
@@ -46,11 +51,6 @@ const onModified = async (c: string) => await fetch(
 </template>
 
 <style>
-#title {
-	text-align: center;
-	font-size: 2rem
-}
-
 .page {
     height: calc(100vh - 360px);
     overflow-y: auto;

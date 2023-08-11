@@ -1,18 +1,18 @@
-<template>
-    <component :is="icon" />
-</template>
-  
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { defineAsyncComponent } from 'vue';
 
-const props = defineProps({ name: { type: String } })
+const props = defineProps({
+  name: {
+    type: String,
+    required: true,
+  },
+});
 
-const icon = ref();
-
-async function updateIcon() {
-   icon.value = await import(`../assets/icon-${props.name}.svg?component`)
-}
-
-updateIcon();
-watch(() => props.name, updateIcon);
+const icon = defineAsyncComponent(() =>
+  import(`../assets/icon-${props.name}.svg`)
+);
 </script>
+
+<template>
+  <component :is="icon" class="fill-current" />
+</template>

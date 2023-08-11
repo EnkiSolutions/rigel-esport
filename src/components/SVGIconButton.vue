@@ -1,17 +1,3 @@
-<template>
-    <button>
-        <Suspense>
-            <SVGIcon :name="icon" />
-            <template #fallback>
-                <slot name="fallback">
-                    <div></div>
-                </slot>
-            </template>
-        </Suspense>
-        <slot></slot>
-    </button>
-</template>
-
 <script setup lang="ts">
 import SVGIcon from './SVGIcon.vue';
 
@@ -22,3 +8,10 @@ defineProps({
     }
 });
 </script>
+
+<template>
+    <button>
+        <SVGIcon :name="icon" />
+        <slot></slot>
+    </button>
+</template>

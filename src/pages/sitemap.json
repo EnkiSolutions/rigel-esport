@@ -1,42 +1,49 @@
 {
-    "prevention": [
+    "$r": [
         {
             "path": "home",
+            "icon": "home",
             "title": "Qui sommes-nous ?"
         },
         {
-            "path": "ateliers",
-            "title": "Ateliers parents-enfants"
+            "path": "events",
+            "icon": "events",
+            "title": "Évènements"
         },
         {
-            "path": "formations",
-            "title": "Nos formations"
-        },
-        {
-            "path": "partenaires",
-            "title": "Nos partenaires Prévention"
-        }
-    ],
-    "gaming": [
-        {
-            "path": "webtv",
+            "path": "web-tv",
+            "icon": "tv",
             "title": "Web TV"
         },
         {
-            "path": "jeux",
-            "title": "Nos jeux"
+            "path": "coaching",
+            "icon": "coaching",
+            "title": "Coachings"
         },
         {
-            "path": "safe",
-            "title": "SAFE League"
+            "path": "shop",
+            "icon": "bag",
+            "title": "Boutique"
         },
         {
-            "path": "projets",
-            "title": "Projets communautaires"
-        },
+            "path": "login",
+            "icon": "user",
+            "title": "Connexion"
+        }
+    ],
+    "game": [
         {
-            "path": "partenaires",
-            "title": "Nos partenaires Gaming"
+            "path": "fortnite",
+            "icon": "fortnite4",
+            "title": "Fortnite"
+        }, {
+            "path": "rocket-league",
+            "icon": "rocket-league",
+            "title": "Rocket League"
+        }, {
+            "path": "valorant",
+            "icon": "valorant",
+            "title": "Valorant"
         }
     ]
 }
