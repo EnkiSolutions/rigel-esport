@@ -201,4 +201,20 @@ button:hover svg path {
   position: absolute;
   right: 0px;
 }
+
+.page {
+    height: calc(100vh - 288px);
+}
+
+@media screen and (max-width: 360px) /*Phone media querie*/
+{
+	.page {
+		height: 64vh;
+		scroll-snap-type: y mandatory;
+	}
+
+	#title {
+		display: none;
+	}
+}
 </style>
