@@ -104,6 +104,7 @@ h1 {
 }
 
 .overlay a {
+  text-decoration: inherit;
   text-align: center;
 	font-size: 0.8rem;
 	transition: font-size 1s;
@@ -117,6 +118,7 @@ h1 {
 	font-size: 1rem;
 }
 
-.card {
-  padding: 2em;
+.marquee {
+  gap: 16px;
+  padding-left: 16px;
 }
