@@ -25,6 +25,8 @@ function connectDiscord() {
 </script>
 
 <template>
-    <button @click="connectGitHub">Connect with GitHub</button>
-    <button @click="connectDiscord">Connect with Discord</button>
+	<div class="page">
+        <button @click="connectGitHub">Connect with GitHub</button>
+        <button @click="connectDiscord">Connect with Discord</button>
+    </div>
 </template>

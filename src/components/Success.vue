@@ -20,6 +20,8 @@ onMounted(async () => {
 });
 </script>
 <template>
-    <p>Connecté à {{ name }}, autorisation en cours...</p>
-    <p>Vous allez être redirigé. Ne fermez pas la fenêtre</p>
+	<div class="page">
+        <p>Connecté à {{ name }}, autorisation en cours...</p>
+        <p>Vous allez être redirigé. Ne fermez pas la fenêtre</p>
+    </div>
 </template>
