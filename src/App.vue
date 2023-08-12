@@ -118,7 +118,7 @@ userMenu.push({ icon: "user", path: "auth", title: "Connexion"});
   height: 32px;
 }
 
-button {
+:deep(.menu) button {
   display: flex;
   line-height: 24px;
   padding: 4px;
@@ -133,37 +133,37 @@ button {
   transition: 200ms;
 }
 
-button:hover {
+:deep(.menu) button:hover {
   border-color: var(--color-lt-3);
 }
 
-button:focus,
-button:focus-visible {
+:deep(.menu) button:focus,
+:deep(.menu) button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.menu div {
+:deep(.menu) div {
   margin: auto;
 }
 
-svg {
+:deep(.menu) svg {
   width: 24px;
   height: 24px;
 }
 
-svg,
-svg g,
-svg path {
+:deep(.menu) svg,
+:deep(.menu) svg g,
+:deep(.menu) svg path {
   transition: 200ms;
   fill: var(--color-lt-3);
 }
 
-a:hover svg,
-a:hover svg g,
-a:hover svg path,
-button:hover svg,
-button:hover svg g,
-button:hover svg path {
+:deep(.menu) a:hover svg,
+:deep(.menu) a:hover svg g,
+:deep(.menu) a:hover svg path,
+:deep(.menu) button:hover svg,
+:deep(.menu) button:hover svg g,
+:deep(.menu) button:hover svg path {
   fill: var(--color-lt-1);
 }
 
