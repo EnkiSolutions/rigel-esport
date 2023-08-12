@@ -9,7 +9,7 @@ export default function (code: string):Record<string, { init: RequestInit, name:
             }
         },
         github: {
-            name: 'Discord',
+            name: 'GitHub',
             init: {
                 method: 'POST',
                 headers: { 'Content-Type': 'text/plain' },
