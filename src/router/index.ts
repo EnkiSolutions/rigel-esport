@@ -16,8 +16,7 @@ let routes: RouteRecordRaw[] = [
   },
   {
     path: '/auth',
-    component: Login,
-    props: true
+    component: Login
   },
   {
     path: '/auth/:provider/success',

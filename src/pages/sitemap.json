@@ -24,11 +24,6 @@
             "path": "shop",
             "icon": "bag",
             "title": "Boutique"
-        },
-        {
-            "path": "login",
-            "icon": "user",
-            "title": "Connexion"
         }
     ],
     "game": [

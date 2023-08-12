@@ -14,7 +14,8 @@ const toggle = () => {
 };
 
 const mainMenu = $r.slice(0, 3);
-const userMenu = $r.slice(3, 6);
+const userMenu = $r.slice(3, 5);
+userMenu.push({ icon: "user", path: "/auth", title: "Connexion"});
 </script>
 <template>
   <div id="page">
