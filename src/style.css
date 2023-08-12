@@ -58,15 +58,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: var(--color-lt-2);
-  text-decoration: inherit;
-  transition: 200ms;
-}
-a:hover {
-  color: var(--color-lt-3);
-}
 
 body {
   background-image: url('./assets/top-background.png'), url('./assets/background.png');
@@ -84,44 +75,48 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  border-color: var(--color-lt-2);
-  background-color: var(--color-dk);
-  cursor: pointer;
-  transition: 200ms;
-}
-button:hover {
-  border-color: var(--color-lt-3);
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.card {
-  padding: 2em;
-}
-
 #app {
   margin: 0 auto;
   min-height: 100vh;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--bg-color);
-    background-color: var(--color-lt-4);
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.page a {
+  font-weight: 500;
+  color: var(--color-lt-2);
+  text-decoration: inherit;
+  transition: 200ms;
+}
+
+.page a:hover {
+  color: var(--color-lt-3);
+}
+
+.dropdown {
+  z-index: 1;
+}
+
+.overlay > nav {
+  flex-direction: column;
+}
+
+.overlay button {
+  width: 160px;
+}
+
+.overlay a {
+  text-align: center;
+	font-size: 0.8rem;
+	transition: font-size 1s;
+}
+
+.overlay a:hover {
+	font-size: 0.9rem;
+}
+
+.overlay a.router-link-active {
+	font-size: 1rem;
+}
+
+.card {
+  padding: 2em;
 }

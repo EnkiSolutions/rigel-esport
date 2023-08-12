@@ -92,7 +92,7 @@ userMenu.push({ icon: "user", path: "auth", title: "Connexion"});
   </div>
 </template>
 
-<style>
+<style scoped>
 #page {
   min-width: 960px;
   max-width: 960px;
@@ -118,36 +118,28 @@ userMenu.push({ icon: "user", path: "auth", title: "Connexion"});
   height: 32px;
 }
 
-.dropdown {
-  z-index: 1;
-}
-
-.overlay > nav {
-  flex-direction: column;
-}
-
-.overlay button {
-  width: 160px;
-}
-
-.overlay a {
-  text-align: center;
-	font-size: 0.8rem;
-	transition: font-size 1s;
-}
-
-.overlay a:hover {
-	font-size: 0.9rem;
-}
-
-.overlay a.router-link-active {
-	font-size: 1rem;
-}
-
-#top button {
+button {
   display: flex;
   line-height: 24px;
   padding: 4px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  border-color: var(--color-lt-2);
+  background-color: var(--color-dk);
+  cursor: pointer;
+  transition: 200ms;
+}
+
+button:hover {
+  border-color: var(--color-lt-3);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 .menu div {
@@ -159,19 +151,19 @@ svg {
   height: 24px;
 }
 
-.menu svg,
-.menu svg g,
-.menu svg path {
+svg,
+svg g,
+svg path {
   transition: 200ms;
   fill: var(--color-lt-3);
 }
 
-.menu a:hover svg,
-.menu a:hover svg g,
-.menu a:hover svg path,
-.menu button:hover svg,
-.menu button:hover svg g,
-.menu button:hover svg path {
+a:hover svg,
+a:hover svg g,
+a:hover svg path,
+button:hover svg,
+button:hover svg g,
+button:hover svg path {
   fill: var(--color-lt-1);
 }
 
