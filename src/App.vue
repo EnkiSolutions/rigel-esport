@@ -144,7 +144,7 @@ userMenu.push({ icon: "user", path: "auth", title: "Connexion"});
 	font-size: 1rem;
 }
 
-button {
+#top button {
   display: flex;
   line-height: 24px;
   padding: 4px;
@@ -159,19 +159,19 @@ svg {
   height: 24px;
 }
 
-svg,
-svg g,
-svg path {
+.menu svg,
+.menu svg g,
+.menu svg path {
   transition: 200ms;
   fill: var(--color-lt-3);
 }
 
-a:hover svg,
-a:hover svg g,
-a:hover svg path,
-button:hover svg,
-button:hover svg g,
-button:hover svg path {
+.menu a:hover svg,
+.menu a:hover svg g,
+.menu a:hover svg path,
+.menu button:hover svg,
+.menu button:hover svg g,
+.menu button:hover svg path {
   fill: var(--color-lt-1);
 }
 

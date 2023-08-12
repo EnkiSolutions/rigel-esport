@@ -1,4 +1,38 @@
 :root {
+  /* Editor */
+	--primary-lt-5: #D7DCEF;
+  --primary-lt-4: #BDC7E5;
+  --primary-lt-3: #A3B1DA;
+  --primary-lt-2: #889DD0;
+  --primary-lt-1: #6B88C5;
+  --primary-dk-5: #1861B0;
+  --primary-dk-4: #1A5090;
+  --primary-dk-3: #1C4071;
+  --primary-dk-2: #1B3053;
+  --primary-dk-1: #162137;
+  --secondary-lt-5: #DDDDDD;
+  --secondary-lt-4: #C7C7C7;
+  --secondary-lt-3: #B2B2B2;
+  --secondary-lt-2: #9D9D9D;
+  --secondary-lt-1: #898989;
+  --secondary-dk-5: #616161;
+  --secondary-dk-4: #505050;
+  --secondary-dk-3: #404040;
+  --secondary-dk-2: #303030;
+  --secondary-dk-1: #222222;
+  --main-bg: var(--secondary-dk-1);
+  --main-txt: var(--primary-lt-1);
+  --link: var(--primary-lt-5);
+  --link-hover: var(--primary-lt-2);
+  --link-focus: var(--primary-lt-4);
+  --link-active: var(--primary-lt-3);
+  --1-bg: var(--secondary-lt-2);
+  --1-txt: var(--secondary-dk-2);
+  --2-bg: var(--secondary-lt-3);
+  --2-txt: var(--secondary-dk-3);
+  --3-bg: var(--secondary-lt-4);
+  --3-txt: var(--secondary-dk-4);
+  /*Base*/
   --color-lt-1: #E2E2E6;
   --color-lt-2: #C6C6CD;
   --color-lt-3: #AAAAB4;
