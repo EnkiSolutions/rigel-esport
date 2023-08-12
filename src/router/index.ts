@@ -1,9 +1,11 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import Page from "../components/Page.vue"
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import Login from "../components/Login.vue";
+import Page from "../components/Page.vue";
+import Success from "../components/Success.vue";
 import sitemap from "../pages/sitemap.json";
-import { h } from 'vue';
+import { h } from "vue";
 
-let routes: RouteRecordRaw[]  = [
+let routes: RouteRecordRaw[] = [
   { 
     path: '/:pathMatch(.*)',
     component: h("<div>Oups ! Cette page n'existe pas</div>")
@@ -11,6 +13,16 @@ let routes: RouteRecordRaw[]  = [
   {
     path: '/',
     redirect: '/home'
+  },
+  {
+    path: '/auth',
+    component: Login,
+    props: true
+  },
+  {
+    path: '/auth/:provider/success',
+    component: Success,
+    props: true
   }
 ];
 let section: keyof typeof sitemap;

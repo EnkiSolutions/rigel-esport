@@ -17,6 +17,3 @@ watch(
 	<Editor v-if="edit" v-model="html" />
 	<div v-else v-html="html"></div>
 </template>
-
-<style>
-</style>
