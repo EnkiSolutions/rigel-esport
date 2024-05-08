@@ -1,6 +1,6 @@
 import { InteractionResponseType, InteractionType, verifyKey } from "discord-interactions";
-import { InteractionObject } from "./discord/types";
-import { sendError } from "./discord/responses";
+import { InteractionObject } from "./types";
+import { sendError } from "./responses";
 
 export default async function (
     message: InteractionObject,
