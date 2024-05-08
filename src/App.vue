@@ -14,7 +14,7 @@ const toggle = () => {
 };
 
 const mainMenu = $r.slice(0, 3);
-const userMenu = $r.slice(3, 4);
+const userMenu = $r.slice(3, 5);
 </script>
 <template>
   <div id="page">
@@ -131,7 +131,7 @@ const userMenu = $r.slice(3, 4);
   cursor: pointer;
   transition: 200ms;
 }
-:deep(.user) button {
+:deep(.shop) button {
   border-color: var(--color-dk);
   background-color: var(--color-lt-2);
 }
@@ -158,9 +158,9 @@ const userMenu = $r.slice(3, 4);
   transition: 200ms;
   fill: var(--color-lt-3);
 }
-:deep(.user) svg,
-:deep(.user) svg g,
-:deep(.user) svg path {
+:deep(.shop) button svg,
+:deep(.shop) button svg g,
+:deep(.shop) button svg path {
   fill: var(--color-dk);
 }
 :deep(.menu) a:hover svg,
@@ -171,12 +171,12 @@ const userMenu = $r.slice(3, 4);
 :deep(.menu) button:hover svg path {
   fill: var(--color-lt-1);
 }
-:deep(.user) a:hover svg,
-:deep(.user) a:hover svg g,
-:deep(.user) a:hover svg path,
-:deep(.user) button:hover svg,
-:deep(.user) button:hover svg g,
-:deep(.user) button:hover svg path {
+:deep(.shop) a:hover svg,
+:deep(.shop) a:hover svg g,
+:deep(.shop) a:hover svg path,
+:deep(.shop) button:hover svg,
+:deep(.shop) button:hover svg g,
+:deep(.shop) button:hover svg path {
   fill: var(--secondary-dk-5);
 }
 .social {

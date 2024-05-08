@@ -18,7 +18,13 @@
         {
             "path": "https://www.helloasso.com/associations/rigel-esport",
             "icon": "bag",
-            "title": "Boutique"
+            "title": "Boutique",
+            "class": "shop"
+        },
+        {
+            "path": "legal",
+            "icon": "question-line",
+            "title": "Mentions légales"
         }
     ],
     "game": [

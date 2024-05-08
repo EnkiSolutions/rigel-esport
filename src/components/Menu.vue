@@ -6,7 +6,7 @@ defineProps({
         type: String
     },
     routes: {
-        type: Array as PropType<{ path:string, icon?: string, title?: string }[]>,
+        type: Array as PropType<{ path:string, icon?: string, title?: string, class?: string }[]>,
         required: true
     }
 });
@@ -16,18 +16,22 @@ const emits = defineEmits(["navigate"])
 <template>
   	<nav class="menu">
 		<template v-for="route in routes">
-			<a v-if="route.path.startsWith('http')" :href="route.path">
+			<a
+				v-if="route.path.startsWith('http')"
+				:class="route.class"
+				:href="route.path">
 				<slot
 					:icon="route.icon"
 					:title="route.title">
 					{{ route.title }}
 				</slot>
 			</a>
-			<router-link v-else
+			<router-link
+				v-else
+				:class="route.class"
 				@click="emits('navigate')"
 				:to="(root ? `/${root}` : '') + `/${route.path}`"
-				v-slot="{ href, navigate }"
-			>
+				v-slot="{ href, navigate }">
 				<slot
 					:icon="route.icon"
 					:title="route.title"
