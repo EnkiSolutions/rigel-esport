@@ -47,11 +47,11 @@ userMenu.push({ icon: "user", path: "auth", title: "Connexion"});
     </div>
     <div class="social menu">
       <Vue3Marquee id="partners" clone pauseOnHover>
-        <img src='./LOGO IRC.png'>
-        <img src='./LOGO IRC.png'>
-        <img src='./LOGO IRC.png'>
-        <img src='./LOGO IRC.png'>
-        <img src='./LOGO IRC.png'>
+        <img src='./assets/LOGO IRC.png'>
+        <img src='./assets/LOGO IRC.png'>
+        <img src='./assets/LOGO IRC.png'>
+        <img src='./assets/LOGO IRC.png'>
+        <img src='./assets/LOGO IRC.png'>
       </Vue3Marquee>
       <div id="networks">
         <a href="https://discord.gg/DFWUa93sEM">
