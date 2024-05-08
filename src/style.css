@@ -122,3 +122,20 @@ h1 {
   gap: 16px;
   padding-left: 16px;
 }
+
+[page="legal"] :not(#title, h1) {
+  text-align: initial;
+}
+
+[page="legal"] h3 {
+  margin-bottom: 8px;
+}
+
+[page="legal"] p {
+  margin: 0px;
+  margin-left: 32px;
+}
+
+[page="legal"] hr {
+  margin: 32px;
+}
