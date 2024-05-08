@@ -47,11 +47,12 @@ userMenu.push({ icon: "user", path: "auth", title: "Connexion"});
     </div>
     <div class="social menu">
       <Vue3Marquee id="partners" clone pauseOnHover>
-        <img src='./assets/LOGO IRC.png'>
-        <img src='./assets/LOGO IRC.png'>
-        <img src='./assets/LOGO IRC.png'>
-        <img src='./assets/LOGO IRC.png'>
-        <img src='./assets/LOGO IRC.png'>
+        <a href="https://www.lesparrainsdunumerique.org">
+          <img src='./assets/LOGO-IRC.png'>
+        </a>
+        <a href="https://wearenolt.com">
+          <img src='./assets/LOGO-NOLT.png'>
+        </a>
       </Vue3Marquee>
       <div id="networks">
         <a href="https://discord.gg/DFWUa93sEM">
@@ -176,6 +177,10 @@ userMenu.push({ icon: "user", path: "auth", title: "Connexion"});
 #partners .marquee {
   padding-left: 8px;
   gap: 8px;
+}
+
+#partners img {
+  height: 32px;
 }
 
 #networks {
