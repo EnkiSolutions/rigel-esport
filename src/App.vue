@@ -14,8 +14,7 @@ const toggle = () => {
 };
 
 const mainMenu = $r.slice(0, 3);
-const userMenu = $r.slice(3, 5);
-userMenu.push({ icon: "user", path: "auth", title: "Connexion"});
+const userMenu = $r.slice(3, 4);
 </script>
 <template>
   <div id="page">
@@ -132,11 +131,13 @@ userMenu.push({ icon: "user", path: "auth", title: "Connexion"});
   cursor: pointer;
   transition: 200ms;
 }
-
+:deep(.user) button {
+  border-color: var(--color-dk);
+  background-color: var(--color-lt-2);
+}
 :deep(.menu) button:hover {
   border-color: var(--color-lt-3);
 }
-
 :deep(.menu) button:focus,
 :deep(.menu) button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -157,7 +158,11 @@ userMenu.push({ icon: "user", path: "auth", title: "Connexion"});
   transition: 200ms;
   fill: var(--color-lt-3);
 }
-
+:deep(.user) svg,
+:deep(.user) svg g,
+:deep(.user) svg path {
+  fill: var(--color-dk);
+}
 :deep(.menu) a:hover svg,
 :deep(.menu) a:hover svg g,
 :deep(.menu) a:hover svg path,
@@ -166,7 +171,14 @@ userMenu.push({ icon: "user", path: "auth", title: "Connexion"});
 :deep(.menu) button:hover svg path {
   fill: var(--color-lt-1);
 }
-
+:deep(.user) a:hover svg,
+:deep(.user) a:hover svg g,
+:deep(.user) a:hover svg path,
+:deep(.user) button:hover svg,
+:deep(.user) button:hover svg g,
+:deep(.user) button:hover svg path {
+  fill: var(--secondary-dk-5);
+}
 .social {
   display: flex;
   width: 100%;

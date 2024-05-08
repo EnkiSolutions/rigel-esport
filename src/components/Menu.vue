@@ -15,19 +15,27 @@ const emits = defineEmits(["navigate"])
 
 <template>
   	<nav class="menu">
-		<router-link
-			v-for="route in routes"
-			@click="emits('navigate')"
-			:to="(root ? `/${root}` : '') + `/${route.path}`"
-			v-slot="{ href, navigate }"
-		>
-			<slot
-				:icon="route.icon"
-				:title="route.title"
-				:href="href"
-				:navigate="navigate">
-				{{ route.title }}
-			</slot>
-		</router-link>
+		<template v-for="route in routes">
+			<a v-if="route.path.startsWith('http')" :href="route.path">
+				<slot
+					:icon="route.icon"
+					:title="route.title">
+					{{ route.title }}
+				</slot>
+			</a>
+			<router-link v-else
+				@click="emits('navigate')"
+				:to="(root ? `/${root}` : '') + `/${route.path}`"
+				v-slot="{ href, navigate }"
+			>
+				<slot
+					:icon="route.icon"
+					:title="route.title"
+					:href="href"
+					:navigate="navigate">
+					{{ route.title }}
+				</slot>
+			</router-link>
+		</template>
 	</nav>
 </template>

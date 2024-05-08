@@ -16,12 +16,7 @@
             "title": "Web TV"
         },
         {
-            "path": "coaching",
-            "icon": "coaching",
-            "title": "Coachings"
-        },
-        {
-            "path": "shop",
+            "path": "https://www.helloasso.com/associations/rigel-esport",
             "icon": "bag",
             "title": "Boutique"
         }
