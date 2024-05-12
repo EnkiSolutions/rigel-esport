@@ -1,3 +1,75 @@
 {
-    "content": ""
+    "template": "Game",
+    "content": {
+        "items": [
+            {
+                "name": "Heads",
+                "members": [
+                    {
+                        "name": "Deku",
+                        "title": "Chef de projet",
+                        "avatar": "deku.webp",
+                        "age": 21,
+                        "networks": [
+                            {
+                                "provider": "twitter",
+                                "id": "DekuSama0"
+                            },
+                            {
+                                "provider": "twitch",
+                                "id": "Rigel_Deku"
+                            },
+                            {
+                                "provider": "tiktok",
+                                "id": "rgl_deku"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Rosters",
+                "members": [
+                    {
+                        "name": "Unblue",
+                        "title": "Capitaine",
+                        "avatar": "unblue.webp",
+                        "age": 21,
+                        "bio": "Demi Finale RBRS S7 - Top 385/926 Open RLCS 1 - Top 257/1006 Open RLCS 2 - Top 4 RAL T1 2024",
+                        "networks": [
+                            {
+                                "provider": "twitter",
+                                "id": "XUnBlue"
+                            },
+                            {
+                                "provider": "twitch",
+                                "id": "Unbluue"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Whyn3x",
+                        "avatar": "whynex.webp",
+                        "age": 21,
+                        "networks": [
+                            {
+                                "provider": "twitter",
+                                "id": "Whyn3x_"
+                            },
+                            {
+                                "provider": "twitch",
+                                "id": "Whyn3x"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Le Renard Mignon",
+                        "avatar": "renard.webp",
+                        "age": 24,
+                        "networks": []
+                    }
+                ]
+            }
+        ]
+    }
 }

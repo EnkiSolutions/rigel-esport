@@ -6,11 +6,6 @@
             "title": "Qui sommes-nous ?"
         },
         {
-            "path": "events",
-            "icon": "events",
-            "title": "Évènements"
-        },
-        {
             "path": "web-tv",
             "icon": "tv",
             "title": "Web TV"

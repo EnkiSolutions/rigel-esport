@@ -13,8 +13,8 @@ const toggle = () => {
   gamesDropdown.value?.toggle();
 };
 
-const mainMenu = $r.slice(0, 3);
-const userMenu = $r.slice(3, 5);
+const mainMenu = $r.slice(0, 2);
+const userMenu = $r.slice(2, 4);
 </script>
 <template>
   <div id="page">

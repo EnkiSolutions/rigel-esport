@@ -1,3 +1,60 @@
 {
-    "content": ""
+    "template": "Game",
+    "content": {
+        "items": [
+            {
+                "name": "Heads",
+                "members": [
+                    {
+                        "name": "Neez",
+                        "title": "Chef de projet",
+                        "avatar": "neez.webp",
+                        "age": 21,
+                        "networks": [
+                            {
+                                "provider": "facebook",
+                                "id": "xXx"
+                            },
+                            {
+                                "provider": "instagram",
+                                "id": "xXx"
+                            },
+                            {
+                                "provider": "twitter",
+                                "id": "xXx"
+                            },
+                            {
+                                "provider": "twitch",
+                                "id": "xXx"
+                            },
+                            {
+                                "provider": "tiktok",
+                                "id": "xXx"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Rosters",
+                "members": [
+                    {
+                        "name": "Nagi",
+                        "avatar": "nagi.webp",
+                        "age": 17,
+                        "networks": [
+                            {
+                                "provider": "twitter",
+                                "id": "solo_nagi7"
+                            },
+                            {
+                                "provider": "twitch",
+                                "id": "rgl_nagi7"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 }

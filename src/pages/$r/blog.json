@@ -1,0 +1,15 @@
+{
+    "template": "Blog",
+    "content": {
+        "name": "blog",
+        "items": [
+            {
+                "title": "Bla",
+                "thumbnail": "",
+                "author": "Bla",
+                "date": "01/02/03",
+                "summary": "Bla"
+            }
+        ]
+    }
+}

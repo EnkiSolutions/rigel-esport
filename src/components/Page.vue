@@ -9,7 +9,15 @@ const splittedPath = fullPath.split("/");
 splittedPath.shift();
 const page = splittedPath.pop();
 const root = splittedPath.pop()??"$r";
-const title = routes[root].find(v => v.path == page)?.title;
+let title = "";
+const route = routes[root];
+if (typeof(route) != "string")
+	title = routes[root].find(v => v.path == page)?.title;
+else {
+	const splittedRoute = route.split("/");
+	const node = await import(`../pages/${splittedRoute[0]}/${splittedRoute[1]}.json`);
+	title = node.content.items[parseInt(page!)].title;
+}
 const { template, content } = await import(`../pages/${root}/${page}.json`);
 localStorage.setItem('origin', fullPath);
 const login = localStorage.getItem('login')

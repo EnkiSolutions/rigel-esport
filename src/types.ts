@@ -133,6 +133,38 @@ export interface TwitchEmbedOptions {
 	playsinline?: boolean;
 }
 
+export type Network = {
+	provider: string;
+	id: string;
+}
+
+export type Member = {
+	name: string;
+	title?: string;
+	avatar?: string;
+	age: number;
+	bio?: string;
+	networks: Network[];
+}
+
+export type Team = {
+	name: string;
+	members: Member[];
+}
+
+export type BlogSection = {
+	name: string
+} & ListContent<BlogPost>
+
+export type BlogPost = {
+    title: string;
+    thumbnail: string;
+    author: string;
+    date: string;
+    summary: string;
+	content: string;
+}
+
 export type Content = {
 	image: string;
 	title: string;

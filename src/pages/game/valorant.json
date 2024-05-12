@@ -1,3 +1,96 @@
 {
-    "content": ""
+    "template": "Game",
+    "content": {
+        "items": [
+            {
+                "name": "Heads",
+                "members": [
+                    {
+                        "name": "Solo",
+                        "title": "Chef de projet",
+                        "avatar": "solo.webp",
+                        "age": 21,
+                        "networks": [
+                            {
+                                "provider": "twitter",
+                                "id": "HTagSoLo"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Rosters",
+                "members": [
+                    {
+                        "name": "Swaizouu",
+                        "title": "In-Game Leader",
+                        "avatar": "swaizouu.webp",
+                        "age": 19,
+                        "networks": [
+                            {
+                                "provider": "twitter",
+                                "id": "SwaizouuVLR"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Dov4hh",
+                        "avatar": "dovah.webp",
+                        "age": 19,
+                        "networks": [
+                            {
+                                "provider": "twitter",
+                                "id": "dov4hh"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Min4to",
+                        "avatar": "minato.webp",
+                        "age": 17,
+                        "networks": [
+                            {
+                                "provider": "twitter",
+                                "id": "Minho_of7"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Insu",
+                        "avatar": "insuu.webp",
+                        "age": 25,
+                        "networks": [
+                            {
+                                "provider": "twitter",
+                                "id": "insuu__"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Ruka",
+                        "avatar": "ruka.webp",
+                        "age": 22,
+                        "networks": [
+                            {
+                                "provider": "twitter",
+                                "id": "_Rukiito"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Skrm",
+                        "avatar": "paul.webp",
+                        "age": 20,
+                        "networks": [
+                            {
+                                "provider": "twitter",
+                                "id": "1312pauul"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 }
