@@ -54,7 +54,7 @@ const userMenu = $r.slice(2, 4);
         </a>
       </Vue3Marquee>
       <div id="networks">
-        <a href="https://discord.gg/DFWUa93sEM">
+        <a href="https://discord.rigelesport.fr">
           <SVGIcon name="discord">Discord</SVGIcon>
         </a>
         <a href="https://twitter.com/Rigel_Esport">
@@ -66,10 +66,12 @@ const userMenu = $r.slice(2, 4);
         <a href="https://www.tiktok.com/@rigel_esport">
           <SVGIcon name="tiktok">TikTok</SVGIcon>
         </a>
+        <a href="https://www.instagram.com/rigel.esport">
+          <SVGIcon name="instagram">Instagram</SVGIcon>
+        </a>
       <!--
         <SVGIcon name="facebook">Facebook</SVGIcon>
         <SVGIcon name="youtube">YouTube</SVGIcon>
-        <SVGIcon name="instagram">Instagram</SVGIcon>
       -->
       </div>
     </div>

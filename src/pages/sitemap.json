@@ -24,10 +24,6 @@
     ],
     "game": [
         {
-            "path": "fortnite",
-            "icon": "fortnite4",
-            "title": "Fortnite"
-        }, {
             "path": "rocket-league",
             "icon": "rocket-league",
             "title": "Rocket League"

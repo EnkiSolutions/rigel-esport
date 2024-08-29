@@ -23,18 +23,6 @@
                 "name": "Rosters",
                 "members": [
                     {
-                        "name": "Swaizouu",
-                        "title": "In-Game Leader",
-                        "avatar": "swaizouu.webp",
-                        "age": 19,
-                        "networks": [
-                            {
-                                "provider": "twitter",
-                                "id": "SwaizouuVLR"
-                            }
-                        ]
-                    },
-                    {
                         "name": "Dov4hh",
                         "avatar": "dovah.webp",
                         "age": 19,
@@ -46,46 +34,39 @@
                         ]
                     },
                     {
-                        "name": "Min4to",
-                        "avatar": "minato.webp",
-                        "age": 17,
-                        "networks": [
-                            {
-                                "provider": "twitter",
-                                "id": "Minho_of7"
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Insu",
-                        "avatar": "insuu.webp",
+                        "name": "Alsoo",
+                        "avatar": "alsoo.png",
                         "age": 25,
                         "networks": [
                             {
                                 "provider": "twitter",
-                                "id": "insuu__"
+                                "id": "tinks731"
                             }
                         ]
                     },
                     {
-                        "name": "Ruka",
-                        "avatar": "ruka.webp",
-                        "age": 22,
+                        "name": "Sykkeezz",
+                        "avatar": "sykkeezz.png",
+                        "age": 18,
                         "networks": [
                             {
                                 "provider": "twitter",
-                                "id": "_Rukiito"
+                                "id": "sykkeezz"
                             }
                         ]
                     },
                     {
-                        "name": "Skrm",
-                        "avatar": "paul.webp",
+                        "name": "Fleetz",
+                        "avatar": "fleetz.png",
                         "age": 20,
                         "networks": [
                             {
                                 "provider": "twitter",
-                                "id": "1312pauul"
+                                "id": "FleetzDesign"
+                            },
+                            {
+                                "provider": "tiktok",
+                                "id": "fleetzvl"
                             }
                         ]
                     }
