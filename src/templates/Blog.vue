@@ -35,9 +35,9 @@ watch(
 			<Editor v-model="list.items[index].content" />
 		</template>
         <template #item="{ item, index }">
-            <router-link class="item-container" :to="'/' + content.name + '/' + index">
-                <img :src="item.thumbnail" alt="">
-                <div>
+            <router-link class="item-container card v-center" :to="'/' + content.name + '/' + index">
+                <img :src="`/contents/${ item.thumbnail }`" alt="">
+                <div class="description">
 				    <h2>{{ item.title }}</h2>
                     <i>{{ item.author }} le {{ item.date }}</i>
                     <p>{{ item.summary }}</p>
@@ -46,3 +46,31 @@ watch(
         </template>
     </ListBase>
 </template>
+
+<style scoped>
+.item-container {
+    display: flex;
+    gap: 16px;
+    width: 100%
+}
+img {
+    height: 156px;
+    aspect-ratio: 1;
+	border-radius: 50%;
+}
+.description {
+    flex-grow: 1;
+}
+.v-center {
+    align-items: center;
+}
+.card {
+    text-align: center;
+	font-weight: bold;
+	background-color: var(--secondary-dk-2);
+	border: 1px solid var(--secondary-lt-2);
+	border-radius: 16px;
+    padding: 16px;
+    transition: 200ms ease-in-out;
+}
+</style>

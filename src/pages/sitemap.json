@@ -6,6 +6,11 @@
             "title": "Qui sommes-nous ?"
         },
         {
+            "path": "blog",
+            "icon": "article",
+            "title": "Blog"
+        },
+        {
             "path": "web-tv",
             "icon": "tv",
             "title": "Web TV"
@@ -36,5 +41,6 @@
             "icon": "valorant",
             "title": "Valorant"
         }
-    ]
+    ],
+    "blog": "$r/blog"
 }

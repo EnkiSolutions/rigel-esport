@@ -4,11 +4,11 @@
         "name": "blog",
         "items": [
             {
-                "title": "Bla",
-                "thumbnail": "",
-                "author": "Bla",
-                "date": "01/02/03",
-                "summary": "Bla"
+                "title": "Vocations d’une structure Esport : l’organisation de tournois",
+                "thumbnail": "esport-tournament.webp",
+                "author": "Jérôme PETIT",
+                "date": "13/05/24",
+                "summary": "Dans l'univers dynamique de l'esport, les tournois ne sont pas seulement des compétitions ; ils sont le cœur battant des structures associatives, catalysant l'engagement et la croissance de leurs communautés. Ces événements rassemblent passionnés et professionnels, forgeant des liens et promouvant l'esprit d'équipe. Cet article explore les rouages de l'organisation de ces tournois et leur impact sur la vie associative. À travers des témoignages de membres actifs de la structure Rigel Esport, qui organise la SAFE x Rigel sur le jeu Valorant les 12 et 13 juillet, nous plongerons dans les défis et les réussites qui caractérisent ces initiatives essentielles."
             }
         ]
     }
