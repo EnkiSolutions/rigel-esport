@@ -165,6 +165,12 @@ export type BlogPost = {
 	content: string;
 }
 
+export type BlogPostContent = {
+	author: string;
+	date: string;
+	article: string;
+}
+
 export type Content = {
 	image: string;
 	title: string;

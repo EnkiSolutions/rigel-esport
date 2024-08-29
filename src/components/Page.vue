@@ -18,7 +18,7 @@ else {
 	const node = await import(`../pages/${splittedRoute[0]}/${splittedRoute[1]}.json`);
 	title = node.content.items[parseInt(page!)].title;
 }
-const { template, content } = await import(`../pages/${root}/${page}.json`);
+const { template, content, info, warning } = await import(`../pages/${root}/${page}.json`);
 localStorage.setItem('origin', fullPath);
 const login = localStorage.getItem('login')
 const onModified = async (c: string) => await fetch(
@@ -39,6 +39,8 @@ const onModified = async (c: string) => await fetch(
 
 <template>
 	<div class="page">
+		<aside v-if="warning" class="warning" v-html="warning"></aside>
+		<aside v-if="info" class="info" v-html="info"></aside>
 		<div id="title">
 			<h1>{{ title }}</h1>
 			<button v-if="login"
@@ -59,6 +61,19 @@ const onModified = async (c: string) => await fetch(
 </template>
 
 <style>
+aside {
+	margin: 32px;
+	padding: 16px;
+	border: 1px solid var(--secondary-lt-2);
+}
+.warning {
+	background-color: var(--yel-dk2);
+	border: 1px solid var(--yel-lt2);
+}
+.info {
+	background-color: var(--blu-dk2);
+	border: 1px solid var(--blu-lt2);
+}
 .page {
     overflow-y: auto;
 }

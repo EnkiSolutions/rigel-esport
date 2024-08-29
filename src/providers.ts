@@ -1,4 +1,4 @@
-export default function (code: string):Record<string, { init: RequestInit, name: string }> {
+export default function (code: string) : Record<string, { init: RequestInit, name: string }> {
     return {
         discord: {
             name: 'Discord',
