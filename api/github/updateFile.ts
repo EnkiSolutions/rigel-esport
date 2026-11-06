@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
-import { client } from "../../backend/vercel/github/client"
+import { client } from "../../backend/vercel/github/client.js";
 
 export default client(
     async(request: VercelRequest, response: VercelResponse, token: string) => {
