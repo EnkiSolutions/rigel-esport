@@ -12,8 +12,11 @@ export default function (code: string) : Record<string, { init: RequestInit, nam
             name: 'GitHub',
             init: {
                 method: 'POST',
-                headers: { 'Content-Type': 'text/plain' },
-                body: code
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    code,
+                    redirectUri: window.location.origin + '/auth/github/success'
+                })
             }
         }
     }

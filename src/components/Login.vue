@@ -1,6 +1,9 @@
 <script setup lang="ts">
 function getState() {
-    const state = new TextDecoder("utf-8").decode(crypto.getRandomValues(new Uint32Array(10)));
+    const state = Array.from(
+        crypto.getRandomValues(new Uint8Array(32)),
+        byte => byte.toString(16).padStart(2, '0')
+    ).join('');
     localStorage.setItem('state', state);
     return state;
 }
