@@ -10,7 +10,7 @@ export default client(
                 content: string,
                 branch?: string
             };
-        const url = `https://api.github.com/repos/${process.env.GITHUB_OWNER}/${process.env.GITHUB_REPO}/contents/src/pages/${root}/page-${page}.json`;
+        const url = `https://api.github.com/repos/${process.env.GITHUB_OWNER}/${process.env.GITHUB_REPO}/contents/src/pages/${root}/${page}.json`;
         const Authorization = "Bearer " + token;
         const { sha } = await (await fetch(
             url + (branch?'?ref='+branch:''),
